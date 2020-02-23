@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 
 /**
  * Loop solution retreived from: https://github.com/aframevr/aframe/issues/2518#issuecomment-289450266
