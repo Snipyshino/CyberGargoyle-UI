@@ -10,9 +10,11 @@ export class GraphComponent implements OnInit {
   @Input()
   public id;
 
-  public type = 'bar'
+  @Input()
+  public type: 'bar'|'pie' = 'bar';
 
-  public dataPoints = [];
+  @Input()
+  public dataPoints: any[] = [];
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 <h1>Cyber/Gargoyle</h1>
 <a-scene>
-  <app-graph *ngFor="let graph of graphs; let i = index" [id]="graph.id"></app-graph>
+  <app-graph *ngFor="let graph of graphs; let i = index" [id]="graph.id" [type]="graph.type" [dataPoints]="graph.dataPoints"></app-graph>
   <a-sky color="#ECECEC"></a-sky>
 </a-scene>

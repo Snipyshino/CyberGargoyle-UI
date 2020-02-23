@@ -1,1 +1,1 @@
-<a-entity *ngIf="" charts="type: {{type}}; dataPoints: {{dataPoints}};" [id]="id"></a-entity>
+<a-entity *ngIf="!!type && dataPoints.length > 0" charts="type: {{type}}; dataPoints: {{dataPoints}};" [id]="id"></a-entity>
