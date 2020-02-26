@@ -1,7 +1,7 @@
 <h1>Cyber/Gargoyle</h1>
 <div id="sceneContainer">
   <a-scene background="color: black" allowfullscreen="yes" allowvr="yes">
-    <app-graph *ngFor="let graph of graphs; let i = index" [id]="graph.id" [type]="graph.type"
+    <app-graph position="4 0 4" *ngFor="let graph of graphs; let i = index" [id]="graph.id" [type]="graph.type"
                [dataPoints]="graph.dataPoints"></app-graph>
 
     <a-camera>
