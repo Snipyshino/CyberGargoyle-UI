@@ -10,6 +10,9 @@ import {AfterViewInit, Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit {
+
+  public scenery = 'https://i.imgur.com/1dUSMiM.jpg';
+
   public graphs = [{
     id: 'kek', type: 'bar', dataPoints: [
       {x: 1, y: 8, z: 0, size: 1, color: '#ff0000'},
