@@ -53,6 +53,8 @@
  */
 
 import 'aframe';
+import 'aframe-charts-component';
+import 'aframe-environment-component';
 
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
