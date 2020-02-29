@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  GH_TOKEN: '7980ab19c4413c766494b324614f95c7eed5a16f',
+  PERSONAL_TOKEN: '7980ab19c4413c766494b324614f95c7eed5a16f',
+  GITHUB_TOKEN: '7980ab19c4413c766494b324614f95c7eed5a16f'
 };

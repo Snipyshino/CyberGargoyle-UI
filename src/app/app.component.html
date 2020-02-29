@@ -1,17 +1,18 @@
 <h1>Cyber/Gargoyle</h1>
 <div id="sceneContainer">
-  <a-scene background="color: black" allowfullscreen="yes" allowvr="yes">
-    <a-box position="3 5 1" src="https://i.imgur.com/mYmmbrp.jpg" color="red" rotation="0 45 45" scale="2 2 2"
-           animation__mouseenter="property: scale; to: 6 6 6; dur: 400; startEvents: mouseenter">
+  <a-scene allowfullscreen="yes" allowvr="yes">
+    <a-entity id="environment" environment="preset: starry;"></a-entity>
+    <a-box id="box" position="0 5 0" src="https://i.imgur.com/mYmmbrp.jpg" ambient-occlusion-map="https://i.imgur.com/1dUSMiM.jpg" color="red"  rotation="0 45 45" scale="0.5 0.5 0.5"
+           animation__mouseenter="property: scale; to: 6 6 6; dur: 200; startEvents: mouseenter">
     </a-box>
-
-    <app-graph *ngFor="let graph of graphs; let i = index" [id]="graph.id" [type]="graph.type"
-               [dataPoints]="graph.dataPoints"></app-graph>
+    <a-light color="red" position="0 0 -1" distance="5" target="box"></a-light>
+<!--    <app-graph *ngFor="let graph of graphs; let i = index" [id]="graph.id" [type]="graph.type"-->
+<!--               [dataPoints]="graph.dataPoints"></app-graph>-->
 
     <a-camera>
       <a-cursor color="#FAFAFA"></a-cursor>
     </a-camera>
 
-    <a-sky src="https://i.imgur.com/1dUSMiM.jpg"></a-sky>
+<!--    <a-sky src="https://i.imgur.com/1dUSMiM.jpg"></a-sky>-->
   </a-scene>
 </div>
