@@ -7,13 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class GraphComponent implements OnInit {
 
-  @Input()
-  public id;
-
-  @Input()
   public type: 'bar'|'pie' = 'bar';
 
-  @Input()
   public dataPoints: any[] = [];
 
   constructor() { }

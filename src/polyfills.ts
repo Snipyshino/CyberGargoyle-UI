@@ -52,10 +52,6 @@
  *
  */
 
-import 'aframe';
-import 'aframe-charts-component';
-import 'aframe-environment-component';
-
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
@@ -65,3 +61,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+import 'aframe';
+import 'aframe-charts-component';
+import 'aframe-environment-component';
+import 'google-charts';
