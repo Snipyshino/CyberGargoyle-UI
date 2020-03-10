@@ -25,6 +25,7 @@
     "aframe-charts-component": "^2.1.6",
     "aframe-environment-component": "^2.0.0",
     "aframe-html-shader": "^0.2.0",
+    "aframe-svg-extruder": "^1.0.2",
     "angular-google-charts": "^0.1.6",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
