@@ -64,4 +64,4 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 import 'aframe';
 import 'aframe-charts-component';
 import 'aframe-environment-component';
-import 'google-charts';
+import 'aframe-html-shader';

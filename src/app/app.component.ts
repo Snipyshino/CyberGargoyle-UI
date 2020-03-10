@@ -13,6 +13,18 @@ export class AppComponent implements AfterViewInit {
 
   public scenery = 'https://i.imgur.com/1dUSMiM.jpg';
 
+  public gOptions = {
+    title: 'Company Performance',
+  };
+
+  public data = [
+    ['2004',  1000,      400],
+    ['2005',  1170,      460],
+    ['2006',  660,       1120],
+    ['2007',  1030,      540]
+  ];
+
+
   public graphs = [{
     id: '1', type: 'bar', dataPoints: "[\n" +
       "  {\"x\": 1, \"y\": 8, \"z\": 0, \"size\": 1, \"color\": \"#ff0000\"},\n" +
@@ -34,11 +46,5 @@ export class AppComponent implements AfterViewInit {
     ]; // TODO replace this with graphService
 
   ngAfterViewInit(): void {
-    // this.graphs.forEach((graph, i) => {
-    //   const entity: any = document.getElementById(graph.id);
-    //
-    //   entity.setAttribute('dataPoint', graph.dataPoints);
-    //   entity.setAttribute('type', graph.type);
-    // });
   }
 }

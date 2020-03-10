@@ -24,7 +24,8 @@
     "aframe": "^1.0.4",
     "aframe-charts-component": "^2.1.6",
     "aframe-environment-component": "^2.0.0",
-    "google-charts": "^2.0.0",
+    "aframe-html-shader": "^0.2.0",
+    "angular-google-charts": "^0.1.6",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
