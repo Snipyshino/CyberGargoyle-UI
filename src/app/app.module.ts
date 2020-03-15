@@ -13,7 +13,7 @@ import {GoogleChartsModule} from 'angular-google-charts';
   imports: [
     BrowserModule,
     HttpClientModule,
-    GoogleChartsModule.forRoot(),
+    GoogleChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

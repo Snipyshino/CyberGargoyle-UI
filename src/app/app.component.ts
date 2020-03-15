@@ -47,19 +47,19 @@ export class AppComponent implements OnChanges, AfterViewInit {
   ]; // TODO replace this with graphService
 
   ngOnChanges(): void {
-    this.refresh();
+    // this.refresh();
   }
 
   private refresh() {
-    const graphpanel: any = document.getElementById('graphPanel');
-    graphpanel.flushToDOM();
+    // const graphpanel: any = document.getElementById('graphPanel');
+    // graphpanel.flushToDOM();
   }
 
   ngAfterViewInit(): void {
-    AFRAME.registerComponent('cursor-listener', {
-      function() {
-        this.el.addEventListener('click', this.refresh());
-      }
-    });
+    // AFRAME.registerComponent('cursor-listener', {
+    //   function() {
+    //     this.el.addEventListener('click', this.refresh());
+    //   }
+    // });
   }
 }
