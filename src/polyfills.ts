@@ -65,3 +65,4 @@ import 'aframe';
 import 'aframe-charts-component';
 import 'aframe-environment-component';
 import 'aframe-htmlembed-component';
+import 'faker';
