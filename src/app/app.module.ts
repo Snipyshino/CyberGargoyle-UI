@@ -3,6 +3,7 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {GraphComponent} from './graph/graph.component';
 import {HttpClientModule} from '@angular/common/http';
+import {GoogleChartsModule} from 'angular-google-charts';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
+    GoogleChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
