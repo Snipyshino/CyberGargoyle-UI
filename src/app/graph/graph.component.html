@@ -1,1 +1,35 @@
-<a-entity charts="type: bar; dataPoints: #data; axis_length: 12"></a-entity>
+<div id="sceneContainer">
+  <a-scene debug>
+    <a-entity id="environment" environment="preset: starry;"></a-entity>
+
+    <a-entity id="cameraRig">
+      <a-camera id="camera">
+      </a-camera>
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .screen"></a-entity>
+      <a-entity laser-controls raycaster="objects: .screen;"></a-entity>
+    </a-entity>
+
+    <a-entity *ngFor="let graph of graphs;" htmlembed="ppu:512" graphEmbed position="0 1 -1">
+      <div style="color: #FFF; width: 900px; height: 500px">
+        Graph goes here
+        <google-chart
+          [options]="graph.gOptions"
+          [type]="graph.type"
+          [data]="graph.data"
+        (ready)="graphReady()">
+        </google-chart>
+      </div>
+    </a-entity>
+
+    <a-entity id="menu" class="screen menu" htmlembed="ppu:256" position="-2 1 -1" rotation="0 45 0">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="" class="button">Home</a></li>
+        <li><a href="#" class="button">Graph</a></li>
+      </ul>
+    </a-entity>
+
+  </a-scene>
+
+</div>
+

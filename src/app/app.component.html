@@ -1,33 +1,5 @@
 <h1>Cyber/Gargoyle</h1>
-<div id="sceneContainer">
-    <a-scene data-html2canvas-ignore="true">
-        <a-entity id="environment" debug environment="preset: forest;"></a-entity>
 
-        <a-entity id="cameraRig">
-            <a-camera id="camera">
-            </a-camera>
-            <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .screen"></a-entity>
-            <a-entity laser-controls raycaster="objects: .screen;"></a-entity>
-        </a-entity>
+<button (click)="vrOn = true">Enter VR!</button>
 
-        <a-entity id="graphEntity" htmlembed position="0 1 -1">
-            <div style="color: #FFF">Graph goes here
-                <google-chart
-                        [options]="gOptions"
-                        [type]="'AreaChart'"
-                        [data]="data">
-                </google-chart>
-            </div>
-        </a-entity>
-
-        <a-entity id="menu" class="screen menu" htmlembed="ppu:256" position="-1 1 -1" rotation="0 45 0">
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="" class="button">Home</a></li>
-                <li><a href="#" class="button">Graph</a></li>
-            </ul>
-        </a-entity>
-
-    </a-scene>
-
-</div>
+<app-graph-component *ngIf="vrOn"></app-graph-component>
