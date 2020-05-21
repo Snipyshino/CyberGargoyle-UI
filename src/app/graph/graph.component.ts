@@ -13,10 +13,10 @@ import {Timestamp} from 'rxjs/internal-compatibility';
 export class GraphComponent implements OnInit, OnDestroy, AfterContentInit {
   public scenery = 'https://i.imgur.com/1dUSMiM.jpg'; // A spherical image of space to fallback on
 
-  private year = 2008;
+  public year = 2008;
 
   public dataEvent = new BehaviorSubject(this.getData());
-  private graphs: any[];
+  public graphs: any[];
 
   private refresh() {
     document.querySelector('[graphEmbed]').components.htmlembed.forceRender();
@@ -30,25 +30,25 @@ export class GraphComponent implements OnInit, OnDestroy, AfterContentInit {
   ngOnInit(): void {
     AFRAME.registerComponent('graphEmbed', {
       dependencies: ['htmlembed'],
-      // init() {
-      //   this.system.registerGraph(this.el);
-      // },
-      // remove() {
-      //   this.system.unregisterGraph(this.el);
-      // }
+      init() {
+        this.system.registerGraph(this.el);
+      },
+      remove() {
+        this.system.unregisterGraph(this.el);
+      }
     });
 
     AFRAME.registerSystem('graphEmbed', {
-      // init: () => {
-      //   this.graphs = [];
-      // },
-      // registerGraph: (graph) => {
-      //   this.graphs.push(graph);
-      // },
-      // unregisterGraph: (graph) => {
-      //   const index = this.graphs.indexOf(graph);
-      //   this.graphs.splice(index, 1);
-      // }
+      init: () => {
+        this.graphs = [];
+      },
+      registerGraph: (graph) => {
+        this.graphs.push(graph);
+      },
+      unregisterGraph: (graph) => {
+        const index = this.graphs.indexOf(graph);
+        this.graphs.splice(index, 1);
+      }
     });
   }
 
