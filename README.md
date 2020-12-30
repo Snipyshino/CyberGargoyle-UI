@@ -1,6 +1,7 @@
 # AngularVRDemo - Cyber/Gargoyle
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+Angular CLI is required to run the Development Server.
 
 ## Development server
 
